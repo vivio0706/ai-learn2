@@ -1,0 +1,64 @@
+{
+  "id": "unit01-chatgpt",
+  "title": "単元1：ChatGPTのサイトにアクセス",
+  "intro": {
+    "heading": "AIとの対話を始めよう",
+    "blocks": [
+      { "type": "hero", "icon": "🤖", "title": "ChatGPTってなに？", "lead": "ChatGPTは、OpenAI社が提供する「対話型AI」。LINEで友だちに送るように、ふつうの言葉で話しかけるだけでAIが答えてくれます。むずかしい操作や専門知識はいりません。" },
+      { "type": "heading", "text": "たとえば、こんなことを頼めます" },
+      { "type": "cards", "items": [
+        { "icon": "✍️", "title": "文章を書く", "desc": "メールやお知らせの下書き", "example": "例：「取引先への日程変更のお詫びメールを書いて」" },
+        { "icon": "💡", "title": "質問に答える", "desc": "調べもの・わからない言葉", "example": "例：「サブスクって何？小学生にも分かるように説明して」" },
+        { "icon": "🧠", "title": "アイデアを出す", "desc": "企画・ネーミング・献立", "example": "例：「カフェの新メニューのアイデアを10個ちょうだい」" },
+        { "icon": "📝", "title": "まとめる", "desc": "長い文章の要約・書き換え", "example": "例：「この議事録を3行に要約して」" }
+      ] },
+      { "type": "heading", "text": "アクセスはたった3ステップ" },
+      { "type": "steps", "items": [
+        { "icon": "🌐", "label": "ブラウザを開く" },
+        { "icon": "⌨️", "label": "chatgpt.com と入力" },
+        { "icon": "✅", "label": "画面が出たら成功" }
+      ] },
+      { "type": "callout", "tone": "warn", "title": "ニセサイトに注意！", "text": "検索結果には本物そっくりの紛らわしいサイトが混ざることがあります。アドレスバーが「chatgpt.com」になっているか確認するクセをつけましょう。" },
+      { "type": "quiz", "question": "ChatGPTの公式サイトの正しいURLは？", "choices": ["chatgpt.com", "chat-gpt.jp", "gptchat.net"], "answer": 0, "explain": "公式URLは chatgpt.com。無料で使い始められ、ログインしなくても試せます。" }
+    ]
+  },
+  "steps": [
+    {
+      "title": "ブラウザでChatGPTを開こう",
+      "body": "ブラウザ（ChromeやEdge）を開いて、アドレスバーに <b>chatgpt.com</b> と入力してEnterを押してください。ページが開くと<b>自動で検知</b>して次に進みます。",
+      "waitingLabel": "ブラウザでchatgpt.comが開くのを待っています…",
+      "advanceWhen": { "anyOf": [
+        { "titleContains": "chatgpt", "processEquals": "chrome.exe" },
+        { "titleContains": "chatgpt", "processEquals": "msedge.exe" },
+        { "titleContains": "chatgpt", "processEquals": "firefox.exe" },
+        { "titleContains": "chatgpt", "processEquals": "opera.exe" }
+      ] }
+    },
+    {
+      "title": "メッセージ入力欄をチェック",
+      "body": "矢印が指しているあたりに、「質問してみましょう」と書かれた<b>入力欄</b>があります。ここがAIに話しかける場所です。場所を確認できたら「次へ」。",
+      "highlightWhen": { "anyOf": [
+        { "titleContains": "chatgpt", "processEquals": "chrome.exe" },
+        { "titleContains": "chatgpt", "processEquals": "msedge.exe" },
+        { "titleContains": "chatgpt", "processEquals": "firefox.exe" },
+        { "titleContains": "chatgpt", "processEquals": "opera.exe" }
+      ] },
+      "pointAt": { "xPct": 57, "yPct": 48, "label": "この辺りが入力欄" }
+    },
+    {
+      "title": "サイドバーもチェック",
+      "body": "画面の<b>左端</b>には、過去の会話が並ぶ<b>サイドバー</b>があります。「新しいチャット」もここから始められます。確認できたら「次へ」。",
+      "highlightWhen": { "anyOf": [
+        { "titleContains": "chatgpt", "processEquals": "chrome.exe" },
+        { "titleContains": "chatgpt", "processEquals": "msedge.exe" },
+        { "titleContains": "chatgpt", "processEquals": "firefox.exe" },
+        { "titleContains": "chatgpt", "processEquals": "opera.exe" }
+      ] },
+      "pointAt": { "xPct": 8, "yPct": 30, "label": "履歴・新しいチャット" }
+    },
+    {
+      "title": "🎉 アクセス完了！",
+      "body": "これで単元1のゴール達成です。次の単元では、入力欄に「こんにちは」と打って<b>初めてのメッセージ</b>を送ってみます。「完了」を押してください。"
+    }
+  ]
+}

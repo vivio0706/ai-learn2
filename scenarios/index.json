@@ -1,0 +1,20 @@
+[
+  {
+    "id": "unit01-chatgpt",
+    "file": "unit01-chatgpt.json",
+    "title": "単元1：ChatGPTのサイトにアクセス",
+    "description": "ブラウザで本物のChatGPTを開くまでをガイド（学習パート＋実操作検知）"
+  },
+  {
+    "id": "demo-notepad",
+    "file": "demo-notepad.json",
+    "title": "🧪 動作デモ：メモ帳で試す",
+    "description": "エンジンの動き（起動検知→ハイライト→自動前進）を30秒で体験"
+  },
+  {
+    "id": "claude-desktop-install",
+    "file": "claude-desktop-install.json",
+    "title": "単元10：Claude Desktopをインストール",
+    "description": "ダウンロード→インストール→起動までを実操作検知つきでガイド"
+  }
+]

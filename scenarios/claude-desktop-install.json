@@ -1,0 +1,61 @@
+{
+  "id": "claude-desktop-install",
+  "title": "単元10：Claude Desktopをインストール",
+  "intro": {
+    "heading": "Claudeをパソコンアプリとして使おう",
+    "blocks": [
+      { "type": "hero", "icon": "🖥️", "title": "ブラウザいらずでAIを呼び出す", "lead": "デスクトップアプリ版を入れると、ブラウザを開かなくてもショートカット一発でClaudeを呼び出せます。" },
+      { "type": "heading", "text": "ブラウザ版とどう違う？" },
+      { "type": "compare",
+        "left": { "title": "🌐 ブラウザ版", "points": ["毎回ブラウザでページを開く", "タブに埋もれがち"] },
+        "right": { "title": "🖥️ デスクトップ版", "points": ["ショートカットで即起動", "他の作業中でもサッと呼べる"], "highlight": true }
+      },
+      { "type": "heading", "text": "この単元の流れ" },
+      { "type": "steps", "items": [
+        { "icon": "⬇️", "label": "ダウンロード" },
+        { "icon": "📦", "label": "インストール" },
+        { "icon": "🚀", "label": "起動でゴール" }
+      ] },
+      { "type": "callout", "tone": "info", "title": "自動で進みます", "text": "ダウンロードページを開いたり、アプリが起動したりすると、チューターが検知して自動で次のステップに進みます。あなたは操作に集中するだけでOK。" },
+      { "type": "quiz", "question": "デスクトップ版の一番のメリットは？", "choices": ["画質が良くなる", "ブラウザを開かずすぐ起動できる", "無料になる"], "answer": 1, "explain": "アプリとして常駐するので、ショートカットやタスクバーからすぐ呼び出せます。" }
+    ]
+  },
+  "steps": [
+    {
+      "title": "ダウンロードページを開く",
+      "body": "ブラウザのアドレスバーに <b>claude.ai/download</b> と入力して開いてください。",
+      "waitingLabel": "ブラウザでダウンロードページが開くのを待っています…",
+      "advanceWhen": {
+        "anyOf": [
+          { "titleAllOf": ["claude", "download"] },
+          { "titleAllOf": ["claude", "ダウンロード"] }
+        ]
+      }
+    },
+    {
+      "title": "Windows版をダウンロード",
+      "body": "ページ内の「<b>Download for Windows</b>」ボタンを押して、インストーラーを保存してください。ダウンロードが終わったら「次へ」。"
+    },
+    {
+      "title": "インストーラーを実行",
+      "body": "保存した <b>Claude のインストーラー（.exe）</b>をダブルクリックしてください（通常は「ダウンロード」フォルダにあります）。インストールが終わるとClaudeが自動で起動し、ここで<b>自動検知</b>します。",
+      "waitingLabel": "Claudeアプリの起動を待っています…",
+      "advanceWhen": {
+        "anyOf": [
+          { "processEquals": "claude.exe" },
+          { "titleContains": "claude", "processEquals": "applicationframehost.exe" }
+        ]
+      }
+    },
+    {
+      "title": "🎉 起動を検知しました！",
+      "body": "Claude Desktopのインストールは完了です。ログインすれば使い始められます。次の単元では <b>Claude Code</b> に挑戦します。「完了」を押してください。",
+      "highlightWhen": {
+        "anyOf": [
+          { "processEquals": "claude.exe" },
+          { "titleContains": "claude", "processEquals": "applicationframehost.exe" }
+        ]
+      }
+    }
+  ]
+}
